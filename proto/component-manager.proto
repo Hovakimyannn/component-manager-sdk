@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package componentManager;
+
+service ComponentManagerService {
+  rpc UpdateBlockVersion(UpdateBlockVersionRequest) returns (UpdateResponse);
+  rpc UpdateBlockSubVersion(UpdateBlockSubVersionRequest) returns (UpdateResponse);
+  rpc EnableBlockMigration(EnableBlockMigrationRequest) returns (UpdateResponse);
+  rpc DisableBlockMigration(DisableBlockMigrationRequest) returns (UpdateResponse);
+}
+
+message UpdateBlockVersionRequest {
+  int32 blockId = 1;
+  string version = 2;
+}
+
+message UpdateBlockSubVersionRequest {
+  int32 blockId = 1;
+  string subVersion = 2;
+}
+
+message EnableBlockMigrationRequest {
+  int32 blockId = 1;
+}
+
+message DisableBlockMigrationRequest {
+  int32 blockId = 1;
+}
+
+message UpdateResponse {
+  bool success = 1;
+  string message = 2;
+}

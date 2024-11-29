@@ -1,0 +1,25 @@
+{
+    "name": "hovakimyannn/component-manager-sdk",
+    "description": "SDK to access component manager service using gRPC",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "grpc/grpc": "^1.57",
+        "ext-grpc": "*",
+        "google/protobuf": "^4.29"
+    },
+    "autoload": {
+        "psr-4": {
+            "GPBMetadata\\": "build/GPBMetadata/",
+            "ComponentManager\\": "build/ComponentManager"
+        }
+    },
+    "authors": [
+        {
+            "name": "hovakimyannn",
+            "email": "harutyun@ucraft.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
